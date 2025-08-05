@@ -79,7 +79,7 @@ if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
 if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
-if (Q.catholics_spd_normalized && Q.catholics_spd_normalized >= 50) {
+if (Q.catholics_pvda_normalized && Q.catholics_pvda_normalized >= 50) {
     this.achieve('katholischer_sozialismus');
 }
 if (Q.workers_spd_normalized >= 80 && Q.new_middle_spd_normalized <= 20 && Q.old_middle_spd_normalized <= 20 && Q.rural_spd_normalized <= 20) {

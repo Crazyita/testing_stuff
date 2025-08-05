@@ -100,7 +100,7 @@ Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
-Q.catholics_spd = 15;
+Q.catholics_pvda = 15;
 Q.catholics_kpd = 5;
 Q.catholics_z = 50;
 Q.catholics_ddp = 0;
@@ -173,7 +173,7 @@ Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 25;
 Q.unemployed_other = 5;
 
-Q.catholics_spd = 10;
+Q.catholics_pvda = 10;
 Q.catholics_kpd = 5;
 Q.catholics_z = 50;
 Q.catholics_ddp = 0;
@@ -255,7 +255,7 @@ Q.unemployed_dnvp = 0;
 Q.unemployed_nsdap = 50;
 Q.unemployed_other = 5;
 
-Q.catholics_spd = 10;
+Q.catholics_pvda = 10;
 Q.catholics_kpd = 5;
 Q.catholics_z = 60;
 Q.catholics_ddp = 0;
