@@ -2,7 +2,7 @@ title: Election Simulation
 set-jump: post_election
 
 
-- @19: 1928 historical scenario
+- @1967: 1928 historical scenario
 - @1930: 1930 historical scenario
 - @1932: 1932 (July) historical scenario
 
@@ -17,8 +17,8 @@ Q.rural = 25; // agriculture and forestry employment... but many of those are pr
 Q.unemployed = 8.6;
 Q.catholics = 30;
 
-Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics', 'protestants', 'women'];
-Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'other'];
+Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'upper_middle', 'rural', 'unemployed', 'catholics', 'protestants'];
+Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -69,6 +69,18 @@ Q.new_middle_sgp = 1;
 Q.new_middle_bp = 10;
 Q.new_middle_gpv = 1;
 Q.new_middle_other = 1;
+
+Q.upper_middle_kvp = 20;
+Q.upper_middle_pvda = 50;
+Q.upper_middle_vvd = 5;
+Q.upper_middle_arp = 20;
+Q.upper_middle_chu = 5;
+Q.upper_middle_psp = 5;
+Q.upper_middle_cpn = 15;
+Q.upper_middle_sgp = 1;
+Q.upper_middle_bp = 10;
+Q.upper_middle_gpv = 1;
+Q.upper_middle_other = 1;
 
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
@@ -286,44 +298,54 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r;
-// this is an absurd concept lol
-Q.united_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
-// aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+Q.roomsrood_coalition = Q.pvda_r + Q.kvp_r + Q.arp_r;
+Q.christiansocialist_coalition = Q.pvda_r + Q.cda_r + Q.d66_r; 
+Q.christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r;
+Q.large_christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r + Q.ds70_r;
+Q.progressivechristian_coalition = Q.pvda_r + Q.ppr_r + Q.d66_r + Q.kvp_r + Q.arp_r;
+Q.purple_coalition = Q.pvda_r + Q.d66_r + Q.vvd_r;
+//semi-impossible coalitions
+//seriously if somebody achieves those through PR that would be insane
+//through FPTP some/all of those could be possible though
+Q.progressive_trio_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r;
+Q.progressive_four_leaf_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r + Q.psp_r;
+Q.left_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r + Q.psp_r + Q.cpn_r;
+//somehow the confessional majority has returned
+Q.confessional_coalition = Q.kvp_r + Q.arp_r + Q.chu_r; 
 !}
 
-The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
+The electoral system is essentially proportional, with the proportion of Tweede kamer seats roughly equal to the proportion of votes, with a slight bias towards larger parties.
  
 **Election results:**
 
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
+# 1967: 37, 1971: 25, 1972: 22, 1977:
+PvdA: [+ pvda_r +]
 
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+# 1967: 42, 1971: 25, 1972: 22, 1977:
+KVP: [+ kvp_r +]
 
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
+VVD: [+ vvd_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
+ARP: [+ arp_r +]
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+CHU: [+ chu_r +]
 
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
+BP: [+ bp_r +]
 
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
+# 1967: 3, 1971: 18
+D'66: [+ d66_r +]
+
+CPN
+
+PSP
+
+SGP
+
+GPV
 
 # 1928: 9, 1930: 10
 Other: [+ other_r +]

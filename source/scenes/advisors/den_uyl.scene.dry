@@ -1,0 +1,34 @@
+title: Joop den Uyl
+is-pinned-card: true
+tags: advisor, labour
+card-image: img/portraits/AufhäuserSiegfried.jpg
+view-if: aufhauser_advisor = 1
+new-page: true 
+
+= Joop den Uyl
+
+Joop den Uyl is a longstanding adelman of Amsterdam, MP, head of the Scientific Institute and socialist ideologist.
+//idk what the first one will be for now
+- @party_discipline
+- @snap_elections
+- @coalition
+- @root: Return to main
+
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if prime_minister != "Den Uyl" : Den Uyl must be Prime Minister. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and prime_minister == "Den Uyl"
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Den Uyl can improve our relationships with our centrist and center-right coalition partners in the government.
+choose-if: advisor_action_timer <= 0 and (pvda_in_government)
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not pvda_in_government : We are not in the government. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if pvda_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition
+
+We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, [+ ddp_name +], and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and [+ ddp_name +], ?] and reduced tensions with the coalition.

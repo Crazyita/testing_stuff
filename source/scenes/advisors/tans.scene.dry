@@ -1,0 +1,43 @@
+title: Sjeng Tans
+is-pinned-card: true
+tags: advisor, labour
+card-image: img/portraits/BaadeFritz.jpg
+view-if: tens_advisor = 1
+new-page: true 
+
+= Fritz Baade
+
+Baade is the first PvdA Member of Parliament from Limburg, and an expert in educational policy.
+
+- @party_discipline
+- @educational_policy
+- @catholic_campaign
+- @root: Return to main
+
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; new_left_dissent -= 5; labour_dissent -= 10; old_left_dissent -= 5; free_thinking_dissent -= 10
+
+We have enforced party discipline to reduce dissent across all factions.
+
+
+@educational_policy
+title: Educational policy
+subtitle: Tans will help shape our educational policy
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+
+
+@catholic_campaign
+title: Campaigning among Catholics
+subtitle: We will campaign among Catholic workers to 'break through' the pillarisation system.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; catholics_pvda =+ 2*(1-dissent)
+
+Our campaign among catholics has been met with little success, as they still listen to the Cardinal rather than the union boss.
+

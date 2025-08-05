@@ -4,7 +4,7 @@ tags: event
 on-arrival: panzerkreuzer_b_seen = 1
 new-page: true
 face-image: img/panzerkreuzer.jpg
-view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (spd_in_government = 1 or spd_toleration = 1)
+view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (pvda_in_government = 1 or spd_toleration = 1)
 
 = Panzerkreuzer B
 
@@ -40,7 +40,7 @@ The center-right parties are critical of our decision to abstain, and the pressu
 @built
 on-arrival: panzerkreuzer_b_funded = 1
 
-Chancellor [+ chancellor +] brings the matter to a full Reichstag vote, which passes with all parties in favor except the SPD and KPD. The ship will be built.
+prime_minister [+ prime_minister +] brings the matter to a full Reichstag vote, which passes with all parties in favor except the SPD and KPD. The ship will be built.
 
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0

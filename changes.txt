@@ -21,9 +21,9 @@ Minor changes:
 - Added descriptions of the internal party factions.
 - Some more tax options.
 - Abortion rights and homosexual rights can be passed with a "progressive coalition" of the SPD, KPD, and DDP.
-- Can only use the Shuffle Cabinet and Women's Rights cards if the chancellor is SPD.
+- Can only use the Shuffle Cabinet and Women's Rights cards if the prime_minister is SPD.
 - Low relations with the DVP results in less leverage in a grand coalition.
-- Papen being appointed as chancellor reduces judicial reform.
+- Papen being appointed as prime_minister reduces judicial reform.
 - Changed frequencies of some cards.
 
 Future changes:
@@ -269,7 +269,7 @@ Major changes:
     - changes fundraising to automatically give 2 resources each year (no fundraising card or emergency fundraising)
     - significantly reduces the initial government budget
     - increases the roles of factions in the economic plan
-    - Otto Braun cannot be both president, minister-president, and chancellor simultaneously
+    - Otto Braun cannot be both president, minister-president, and prime_minister simultaneously
     - increasing Reichsbanner militarization will reduce relations with Zentrum
 - New achievement: Schwarz-Rot-Gold - successfully complete the game in historical mode.
 - New visualization for inflation and unemployment history.
@@ -277,7 +277,7 @@ Major changes:
 
 Minor changes:
 
-- Some changes to when Papen can be appointed Chancellor.
+- Some changes to when Papen can be appointed prime_minister.
 - Economic Democracy options can reduce unemployment.
 - Slightly increased unemployment reduction from the Left Plan.
 
@@ -373,7 +373,7 @@ Major changes:
 Minor changes:
 - UI change for the options menu
 - various tweaks to effects and thresholds
-- Wirth is an option for chancellor after the death of Müller if Joseph Joos is the Zentrum leader.
+- Wirth is an option for prime_minister after the death of Müller if Joseph Joos is the Zentrum leader.
 - Defunding the Reichswehr increases coup progress more, and increases paramilitary strength.
 
 
@@ -489,8 +489,8 @@ v1.3 - Economic Expansion, Cabinet, bugfixes and minor updates
 
 Major changes:
 - New event: Economic Expansion (if economic growth is high enough for long enough)
-- New events: Papen's Economic Plan, Schleicher's Schemes (when Papen or Schleicher are chancellor)
-- New feature: pinned Cabinet card that exposes government actions (only on Easy difficulty with an SPD chancellor)
+- New events: Papen's Economic Plan, Schleicher's Schemes (when Papen or Schleicher are prime_minister)
+- New feature: pinned Cabinet card that exposes government actions (only on Easy difficulty with an SPD prime_minister)
 - New music (Sozialisten-Marsch)
 
 Minor changes:
