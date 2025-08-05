@@ -104,7 +104,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Old Left is interested in continuing the line held under Drees, cooperate with the Catholics and Protestants and an anti-communist line.">Old Left</span>!} strength: [+ old_left_strength : strength +], dissent: [+ old_left_strength : dissent +]
 
-{!<span class="tooltip-text" title="Labour's goal is to get economic reform and benefits for organized workers within the small marges of democracy.">Labour</span>!} strength: [+ labour_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="Labour's goal is to get economic reform and benefits for organized workers within the small marges of democracy.">Labour</span>!} strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Free-Thinkers are pragmatic participants in government, and seek to expand the welfare state and personal freedoms.">Free-thinkers</span>!} strength: [+ free_thinking_strength : strength +], dissent: [+ free_thinking_dissent : dissent +]
 

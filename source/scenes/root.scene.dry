@@ -50,8 +50,8 @@ Q.factions = ['old left', 'new left', 'labour', 'free_thinking'];
 // should this be normalized to 100%?
 Q.old_left_strength = 35;
 Q.old_left_dissent = 0;
-Q.labor_strength = 35;
-Q.labor_dissent = 5;
+Q.labour_strength = 35;
+Q.labour_dissent = 5;
 Q.new_left_strength = 5;
 Q.new_left_dissent = 5;
 Q.free_thinking_strength = 30;
@@ -99,13 +99,15 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.kvp_relation = 30;
+Q.arp_relation = 50;
+Q.psp_relation = 40;
+Q.vvd_relation = 20;
+Q.cpn_relation = 35;
+// BP, SGP and CHU are invariably hostile
+Q.sgp_relation = 10;
+Q.BP_relation = 10;
+Q.CHU_relation = 10
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -368,8 +370,8 @@ Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'DNVP';
 Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
+Q.labour_minister = 'Brauns';
+Q.labour_minister_party = 'Z';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister = 'Curtius';
@@ -455,12 +457,12 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'party_disunity',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
-            'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
+            'foreign_policy', 'judiciary', 'labour_affairs', 'military_policy',
             'police', 'prussian_affairs', 'shuffle_cabinet', 'social_welfare',
             'homosexual_rights', 'economic_policy', 'coalition_affairs',
             'war_guilt', 'womens_rights', 'economic_democracy',
             'dealing_with_toleration',
-            'constitutional_reform', 'labor_rights',
+            'constitutional_reform', 'labour_rights',
             'education_science', 'curriculum',
             // events
             'emergency_cuts', 'unemployment_insurance',
@@ -501,7 +503,7 @@ Q.economic_policy_timer = 0;
 Q.fiscal_policy_timer = 0;
 Q.foreign_policy_timer = 0;
 Q.judiciary_timer = 0;
-Q.labor_affairs_timer = 0;
+Q.labour_affairs_timer = 0;
 Q.military_policy_timer = 0;
 Q.police_timer = 0;
 Q.prussian_affairs_timer = 0;
@@ -546,7 +548,7 @@ Q.braun_advisor = 0; // Otto Braun
 Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
-// Labor advisors
+// labour advisors
 Q.leipart_advisor = 0; // Theodor Leipart
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
@@ -584,7 +586,7 @@ on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_re
 go-to: 1966_main
 
 @1966_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labour_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1966_main
 
 @1966_historical
@@ -597,7 +599,7 @@ Q.dues = 1;
 Q.rb_strength = 2000;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
-Q.labor_dissent = 25;
+Q.labour_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpd_relation = 16;

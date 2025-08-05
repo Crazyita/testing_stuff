@@ -1,5 +1,5 @@
 title: The KPD checks upon our progress in accomplishing the coalition's goals...
-view-if: (in_popular_front or in_left_front) and (kpd_ultimatum_timer = 0 or (welfare_goal_completed and agriculture_goal_completed and economy_goal_completed and finance_goal_completed and labor_goal_completed and reichswehr_goal_completed)) and kpd_goals_seen = 1 and kpd_ultimatum_seen = 0 and pvda_in_government
+view-if: (in_popular_front or in_left_front) and (kpd_ultimatum_timer = 0 or (welfare_goal_completed and agriculture_goal_completed and economy_goal_completed and finance_goal_completed and labour_goal_completed and reichswehr_goal_completed)) and kpd_goals_seen = 1 and kpd_ultimatum_seen = 0 and pvda_in_government
 on-arrival: {!
 Q.kpd_ultimatum_seen = 1;
 Q.kpd_goals_completed = 1;
@@ -20,7 +20,7 @@ if (Q.finance_goal && !Q.finance_goal_completed) {
     Q.kpd_goals_completed = 0;
     Q.kpd_score -= 1;
 }
-if (Q.labor_goal && !Q.labor_goal_completed) {
+if (Q.labour_goal && !Q.labour_goal_completed) {
     Q.kpd_goals_completed = 0;
     Q.kpd_score -= 1;
 }
@@ -52,7 +52,7 @@ At the start of this government, the KPD presented a list of goals for the coali
 
 [? if finance_goal = 1 : - Make taxes more progressive. - [? if finance_goal_completed : success ?][? if not finance_goal_completed: failed ?] ?]
 
-[? if labor_goal = 1 : - Support workers in labor disputes. - [? if labor_goal_completed : success ?][? if not labor_goal_completed: failed ?] ?]
+[? if labour_goal = 1 : - Support workers in labour disputes. - [? if labour_goal_completed : success ?][? if not labour_goal_completed: failed ?] ?]
 
 [? if foreign_goal = 1 : - Improve our relations with the Soviet Union. - [? if foreign_goal_completed : success ?][? if not foreign_goal_completed: failed ?] ?]
 

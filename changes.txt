@@ -29,7 +29,7 @@ Minor changes:
 Future changes:
 
 - Move end date to later in 1933.
-- Government Affairs: Economic Democracy (labor + economy ministries), Left-wing economic crisis response (pursue nationalizations), Further investigate SA/SH/RFB after banning.
+- Government Affairs: Economic Democracy (labour + economy ministries), Left-wing economic crisis response (pursue nationalizations), Further investigate SA/SH/RFB after banning.
 - More tax/tariff policy options
 - A history page, showing a history of your actions.
 - Increase hand size to 4 (at least for easy difficulty)
@@ -58,7 +58,7 @@ v0.9 - government updates:
 
 Major changes:
 
-- New government affairs card: Economic Democracy (labor + economy/finance ministries). New advisor action for Hilferding.
+- New government affairs card: Economic Democracy (labour + economy/finance ministries). New advisor action for Hilferding.
 - New events: March on Berlin, Capital Strike.
 - New options: Left economic plan for the transformation of the economy (mass nationalizations), advisor actions to support the Left economic plan (Sender, Aufhäuser)
 - New achievements: Räterepublik, Polykrise
@@ -152,7 +152,7 @@ v0.11.1 - bugfixes, save system updates
 Changes:
 - Fixed elections preempting other events - elections are now only held after all other events for the month have been resolved.
 - Save system: added functions to export to file, load from file
-- Supporting employers in labor disputes now lowers capital strike progress.
+- Supporting employers in labour disputes now lowers capital strike progress.
 
 
 v0.12 - Economics, coups, and technical improvements
@@ -160,7 +160,7 @@ v0.12 - Economics, coups, and technical improvements
 Major changes:
 
 - Added an inflation variable, and relationships between inflation/deflation, unemployment, and spending.
-- New events: High Inflation, Labor Unrest
+- New events: High Inflation, labour Unrest
 - New economic plan: moderate/reformist plan
 - Added a tabbed view in the status sidebar, showing more information.
 - Easy mode now has 4 cards in the hand.
@@ -193,7 +193,7 @@ Changes:
 
 - Fixed issue with Wels' clearing the agenda on Easy
 - Added a "limited budget" option for the reformist economic plan
-- WTB-plan now costs 4 resources for the first iteration, but can be decreased to 3 by pro-labor policies or existing socializations.
+- WTB-plan now costs 4 resources for the first iteration, but can be decreased to 3 by pro-labour policies or existing socializations.
 - Slight boost to the reformist economic plan.
 
 For the next major update:
@@ -392,12 +392,12 @@ Changes:
 - There is a new hidden variable, "strife", that increases when there is streetfighting or other conflict. It doesn't have a lot of uses yet...
 
 
-v0.19 - Labor rights and unemployment insurance, more gradual support changes
+v0.19 - labour rights and unemployment insurance, more gradual support changes
 
 Major changes:
-- New government affairs card: Labor Rights
-- The unemployment insurance crisis can be handled preemptively using Labor Rights. In general, some of the flow around unemployment insurance has been changed.
-- New advisor: Rudolf Wissell (labor)
+- New government affairs card: labour Rights
+- The unemployment insurance crisis can be handled preemptively using labour Rights. In general, some of the flow around unemployment insurance has been changed.
+- New advisor: Rudolf Wissell (labour)
 - Party support changes are now more gradual, happening monthly instead of always at the start of the year. There are some tweaks to party support, with more support from middle-class and rural demographics flowing from Others and the DVP to the NSDAP to better account for historical election results.
 
 Minor changes:
@@ -406,7 +406,7 @@ Minor changes:
 v0.19.1 - Bug fixes
 
 Changes:
-- Fixed return to hand for Labor Affairs
+- Fixed return to hand for labour Affairs
 - Fixed an issue with unemployment insurance and President Hindenburg/Braun
 - Removed ending slides about unemployment when the game ends before 1930
 
