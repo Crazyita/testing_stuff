@@ -37,7 +37,7 @@ title: Campaigning among Catholics
 subtitle: We will campaign among Catholic workers to 'break through' the pillarisation system.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; catholics_pvda =+ 2*(1-dissent)
+on-arrival: advisor_action_timer = 6; catholics_pvda += 2*(1-dissent)
 
 Our campaign among catholics has been met with little success, as they still listen to the Cardinal rather than the union boss.
 
