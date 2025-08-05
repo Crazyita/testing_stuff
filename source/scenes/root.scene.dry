@@ -46,27 +46,25 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['old left', 'new left', 'labour', 'free_thinking'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
+Q.old_left_strength = 35;
+Q.old_left_dissent = 0;
+Q.labor_strength = 35;
 Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.new_left_strength = 5;
+Q.new_left_dissent = 5;
+Q.free_thinking_strength = 30;
+Q.free_thinking_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
+Q.old_left_resign = 0;
+Q.new_left_split = 0;
+Q.free_thinking_resigned = 0;
 
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
+// have we discovered the new left?
+Q.new_left = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -116,15 +114,6 @@ Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
-
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-
-
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
