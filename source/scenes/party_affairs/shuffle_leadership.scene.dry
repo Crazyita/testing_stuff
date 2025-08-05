@@ -286,15 +286,14 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labour_advisor, neorev_advisor, nonfactional_advisor
+tags: old_left_advisor, free_thinking_advisor, labour_advisor, new_left_advisor, nonfactional_advisor
 frequency: 1
 
 
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labour: Add labour
-- @neorev: Add Neorevisionists
+- @left: Add Old Leftists
+- @reformist: Add Free-Thinkers
+- @labour: Add Labour
+- @neorev: Add New Leftists
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
