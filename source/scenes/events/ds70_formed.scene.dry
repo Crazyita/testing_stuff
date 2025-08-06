@@ -1,0 +1,25 @@
+on-arrival: {!
+Q.ds70_exists = 1;
+Q.parties.push('ds70');
+
+Q.workers_ds70 = 10;
+Q.workers_pvda -= 3;
+Q.new_middle_ds70 = 1;
+Q.old_middle_ds70 = 5;
+Q.upper_middle_ds70 = 10;
+Q.rural_ds70 = 0;
+Q.unemployed_ds70 = 0;
+Q.catholics_ds70 = 0;
+
+Q.workers_other -= 5;
+
+// update all records
+Q.ds70_r = 0;
+Q.old_ds70_r = 0;
+for (var record of Q.election_records) {
+    record['ds70'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['ds70'] = 0;
+}
+!}
