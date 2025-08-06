@@ -13,11 +13,11 @@ max-visits: 1
 Several young socialists, vaguely led by Andrè ter Louw. This political tendency calls for a radical progressive and socialist program, where we stand against the conservative confessionals and liberals while using extraparliamentary methods.
 
 #- @shuffle_leadership: It's time to change our advisors to take into account new ideas.
-- @support_new_left: Support the neorevisionist movement.
+- @support_new_left: Support the new left movement.
 - @no_new_ideas: We don't need new ideas.
 - @easy_discard
 
-@support_neo
+@support_new_left
 on-arrival: new_left_strength += 10; new_left_dissent += -5; old_left_strength -= 5; old_left_dissent += 5 
 
 We support the new leaders, and start participating more often in protests. Us embracing the New Left does annoy some in the party, who think they are upstarts and too radical.

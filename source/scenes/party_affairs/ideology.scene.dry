@@ -55,7 +55,7 @@ The labour wing of the party supports continued particpation in government in or
 
 @free_thinking_ideology
 on-arrival: {!
-if (Q.ideology && Q.ideology != "free_thinking_ideology") {
+if (Q.ideology && Q.ideology != "free_thinking") {
     Q.changed = 1;
 }
 !}

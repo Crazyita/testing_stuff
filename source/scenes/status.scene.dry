@@ -94,11 +94,11 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="GPV">GPV</span>!}: [+ gpv_relation : relationships +]
 
-[? if d66 > 0 : D'66: [+ d66_relation : relationships +] ?]
+[? if d66_exists > 0 : D'66: [+ d66_relation : relationships +] ?]
 
-[? if ppr > 0 : PPR: [+ PPR_relation : relationships +] ?]
+[? if ppr_exists > 0 : PPR: [+ PPR_relation : relationships +] ?]
 
-[? if ds70 > 0 : DS'70: [+ DS70_relation : relationships +] ?]
+[? if ds70_exists > 0 : DS'70: [+ DS70_relation : relationships +] ?]
 
 = Internal Factions of the PvdA
 
