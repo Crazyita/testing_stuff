@@ -347,21 +347,21 @@ Q.bp_r = 2;
 Q.gpv_r = 1;
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+Q.pvda_r = 29;
+Q.kvp_r = 33;
+Q.arp_r = 9;
+Q.chu_r = 8;
+Q.vvd_r = 11;
+Q.psp_r = 3;
+Q.cpn_r = 2;
+Q.sgp_r = 2;
+Q.bp_r = 2;
+Q.gpv_r = 1;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -374,9 +374,9 @@ Q.economic_records = [];
 // State of the government
 Q.president = "Hindenburg";
 // starting prime_minister: Wilhelm Marx
-Q.prime_minister = "Marx";
-Q.prime_minister_party = 'Z';
-Q.pvda_in_government = 0;
+Q.prime_minister = "Cals";
+Q.prime_minister_party = 'KVP';
+Q.pvda_in_government = 1;
 Q.z_in_government = 1;
 Q.ddp_in_government = 0;
 Q.dvp_in_government = 1;
@@ -396,7 +396,6 @@ Q.in_popular_front = 0;
 Q.in_left_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
 Q.grand_coalition_failed = 0;
 // if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;

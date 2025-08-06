@@ -33,7 +33,7 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 President: [+ president +]
 
-prime_minister: [+ prime_minister +] ([+ prime_minister_party +])
+Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Tweede Kamer composition:
 
