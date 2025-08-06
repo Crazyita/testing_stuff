@@ -37,7 +37,9 @@ Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 Tweede Kamer composition:
 
 {!<span class="tooltip-text" title="Labour Party">PvdA</span>!}: [+ pvda_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+[? if ds70_exists and ds70_r > 0: DS70: [+ ds70_r +]% ?]
+[? if d66_exists and d66_r > 0: D'66: [+ d66_r +]% ?]
+[? if ppr_exists and ppr_r > 0: PPR: [+ ppr_r +]% ?]
 {!<span class="tooltip-text" title="Catholic People's Party">KVP</span>!}: [+ kvp_r +]%
 {!<span class="tooltip-text" title="Anti-Revolutionary Party">ARP</span>!}: [+ arp_r +]%
 {!<span class="tooltip-text" title="Christian-Historic Union">CHU</span>!}: [+ chu_r +]%
