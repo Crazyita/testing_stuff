@@ -323,7 +323,7 @@ Q.protestants_bp = 4;
 Q.protestants_gpv = 1;
 
 
-// Current Tweede Kamer composition
+// Starting Tweede Kamer composition
 // % of Tweede Kamer in Jan 1966
 // source: wikipedia
 
@@ -339,20 +339,24 @@ Q.bp_r = 2;
 Q.gpv_r = 1;
 
 // diff from prev
-Q.pvda_r = 29;
-Q.kvp_r = 33;
-Q.arp_r = 9;
-Q.chu_r = 8;
-Q.vvd_r = 11;
-Q.psp_r = 3;
-Q.cpn_r = 2;
-Q.sgp_r = 2;
-Q.bp_r = 2;
-Q.gpv_r = 1;
+Q.old_pvda_r = 29;
+Q.old_kvp_r = 33;
+Q.old_arp_r = 9;
+Q.old_chu_r = 8;
+Q.old_vvd_r = 11;
+Q.old_psp_r = 3;
+Q.old_cpn_r = 2;
+Q.old_sgp_r = 2;
+Q.old_bp_r = 2;
+Q.old_gpv_r = 1;
 
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
+// splitters 
+Q.ds70_r = 0;
+Q.old_ds70_r = 0;
+Q.d66_r = 0;
+Q.old_d66_r = 0;
+Q.ppr_r = 0;
+Q.old_ppr_r = 0;
 
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
