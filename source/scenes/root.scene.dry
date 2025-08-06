@@ -230,7 +230,6 @@ Q.workers_cpn = 15;
 Q.workers_sgp = 1;
 Q.workers_bp = 10;
 Q.workers_gpv = 1;
-Q.workers_other = 1;
 
 Q.educated_workers_kvp = 20;
 Q.educated_workers_pvda = 60;
@@ -242,7 +241,6 @@ Q.educated_workers_cpn = 15;
 Q.educated_workers_sgp = 1;
 Q.educated_workers_bp = 5;
 Q.educated_workers_gpv = 1;
-Q.educated_workers_other = 1;
 
 Q.old_middle_kvp = 20;
 Q.old_middle_pvda = 50;
@@ -254,7 +252,6 @@ Q.old_middle_cpn = 15;
 Q.old_middle_sgp = 1;
 Q.old_middle_bp = 10;
 Q.old_middle_gpv = 1;
-Q.old_middle_other = 1;
 
 Q.new_middle_kvp = 20;
 Q.new_middle_pvda = 50;
@@ -266,7 +263,6 @@ Q.new_middle_cpn = 15;
 Q.new_middle_sgp = 1;
 Q.new_middle_bp = 10;
 Q.new_middle_gpv = 1;
-Q.new_middle_other = 1;
 
 Q.upper_middle_kvp = 20;
 Q.upper_middle_pvda = 50;
@@ -278,7 +274,6 @@ Q.upper_middle_cpn = 15;
 Q.upper_middle_sgp = 1;
 Q.upper_middle_bp = 10;
 Q.upper_middle_gpv = 1;
-Q.upper_middle_other = 1;
 
 Q.rural_kvp = 20;
 Q.rural_pvda = 50;
@@ -290,7 +285,6 @@ Q.rural_cpn = 15;
 Q.rural_sgp = 1;
 Q.rural_bp = 10;
 Q.rural_gpv = 1;
-Q.rural_other = 1;
 
 Q.unemployed_kvp = 20;
 Q.unemployed_pvda = 50;
@@ -302,7 +296,6 @@ Q.unemployed_cpn = 15;
 Q.unemployed_sgp = 1;
 Q.unemployed_bp = 10;
 Q.unemployed_gpv = 1;
-Q.unemployed_other = 1;
 
 Q.catholics_kvp = 50;
 Q.catholics_pvda = 10;
@@ -314,7 +307,6 @@ Q.catholics_cpn = 1;
 Q.catholics_sgp = 0;
 Q.catholics_bp = 2;
 Q.catholics_gpv = 0;
-Q.catholics_other = 1;
 
 Q.protestants_kvp = 0;
 Q.protestants_pvda = 10;
@@ -326,7 +318,6 @@ Q.protestants_cpn = 5;
 Q.protestants_sgp = 1;
 Q.protestants_bp = 4;
 Q.protestants_gpv = 1;
-Q.protestants_other = 1;
 
 
 // Current Tweede Kamer composition

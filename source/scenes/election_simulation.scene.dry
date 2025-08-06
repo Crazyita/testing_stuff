@@ -16,7 +16,7 @@ Q.unemployed = 8.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'upper_middle', 'rural', 'unemployed', 'catholics', 'protestants'];
-Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70','other'];
+Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -30,7 +30,6 @@ Q.workers_cpn = 15;
 Q.workers_sgp = 1;
 Q.workers_bp = 10;
 Q.workers_gpv = 1;
-Q.workers_other = 1;
 
 Q.educated_workers_kvp = 20;
 Q.educated_workers_pvda = 60;
@@ -42,7 +41,6 @@ Q.educated_workers_cpn = 15;
 Q.educated_workers_sgp = 1;
 Q.educated_workers_bp = 5;
 Q.educated_workers_gpv = 1;
-Q.educated_workers_other = 1;
 
 Q.old_middle_kvp = 20;
 Q.old_middle_pvda = 50;
@@ -54,7 +52,6 @@ Q.old_middle_cpn = 15;
 Q.old_middle_sgp = 1;
 Q.old_middle_bp = 10;
 Q.old_middle_gpv = 1;
-Q.old_middle_other = 1;
 
 Q.new_middle_kvp = 20;
 Q.new_middle_pvda = 50;
@@ -66,7 +63,6 @@ Q.new_middle_cpn = 15;
 Q.new_middle_sgp = 1;
 Q.new_middle_bp = 10;
 Q.new_middle_gpv = 1;
-Q.new_middle_other = 1;
 
 Q.upper_middle_kvp = 20;
 Q.upper_middle_pvda = 50;
@@ -78,8 +74,6 @@ Q.upper_middle_cpn = 15;
 Q.upper_middle_sgp = 1;
 Q.upper_middle_bp = 10;
 Q.upper_middle_gpv = 1;
-Q.upper_middle_other = 1;
-
 Q.rural_kvp = 20;
 Q.rural_pvda = 50;
 Q.rural_vvd = 5;
@@ -90,7 +84,6 @@ Q.rural_cpn = 15;
 Q.rural_sgp = 1;
 Q.rural_bp = 10;
 Q.rural_gpv = 1;
-Q.rural_other = 1;
 
 Q.unemployed_kvp = 20;
 Q.unemployed_pvda = 50;
@@ -102,7 +95,6 @@ Q.unemployed_cpn = 15;
 Q.unemployed_sgp = 1;
 Q.unemployed_bp = 10;
 Q.unemployed_gpv = 1;
-Q.unemployed_other = 1;
 
 Q.catholics_kvp = 20;
 Q.catholics_pvda = 50;
@@ -114,7 +106,6 @@ Q.catholics_cpn = 15;
 Q.catholics_sgp = 1;
 Q.catholics_bp = 10;
 Q.catholics_gpv = 1;
-Q.catholics_other = 1;
 
 Q.protestants_kvp = 20;
 Q.protestants_pvda = 50;
@@ -126,7 +117,6 @@ Q.protestants_cpn = 15;
 Q.protestants_sgp = 1;
 Q.protestants_bp = 10;
 Q.protestants_gpv = 1;
-Q.protestants_other = 1;
 
 Q.kvp_r = 20;
 Q.pvda_r = 50;
@@ -138,7 +128,6 @@ Q.cpn_r = 15;
 Q.sgp_r = 1;
 Q.bp_r = 10;
 Q.gpv_r = 1;
-Q.other_r = 1;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -155,7 +144,7 @@ Q.unemployed = 20;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'upper_middle', 'rural', 'unemployed', 'catholics', 'protestants'];
-Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70','other'];
+Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -169,7 +158,6 @@ Q.workers_cpn = 15;
 Q.workers_sgp = 1;
 Q.workers_bp = 10;
 Q.workers_gpv = 1;
-Q.workers_other = 1;
 
 Q.educated_workers_kvp = 20;
 Q.educated_workers_pvda = 60;
@@ -181,7 +169,6 @@ Q.educated_workers_cpn = 15;
 Q.educated_workers_sgp = 1;
 Q.educated_workers_bp = 5;
 Q.educated_workers_gpv = 1;
-Q.educated_workers_other = 1;
 
 Q.old_middle_kvp = 20;
 Q.old_middle_pvda = 50;
@@ -193,7 +180,6 @@ Q.old_middle_cpn = 15;
 Q.old_middle_sgp = 1;
 Q.old_middle_bp = 10;
 Q.old_middle_gpv = 1;
-Q.old_middle_other = 1;
 
 Q.new_middle_kvp = 20;
 Q.new_middle_pvda = 50;
@@ -205,7 +191,6 @@ Q.new_middle_cpn = 15;
 Q.new_middle_sgp = 1;
 Q.new_middle_bp = 10;
 Q.new_middle_gpv = 1;
-Q.new_middle_other = 1;
 
 Q.upper_middle_kvp = 20;
 Q.upper_middle_pvda = 50;
@@ -217,7 +202,6 @@ Q.upper_middle_cpn = 15;
 Q.upper_middle_sgp = 1;
 Q.upper_middle_bp = 10;
 Q.upper_middle_gpv = 1;
-Q.upper_middle_other = 1;
 
 Q.rural_kvp = 20;
 Q.rural_pvda = 50;
@@ -229,7 +213,6 @@ Q.rural_cpn = 15;
 Q.rural_sgp = 1;
 Q.rural_bp = 10;
 Q.rural_gpv = 1;
-Q.rural_other = 1;
 
 Q.unemployed_kvp = 20;
 Q.unemployed_pvda = 50;
@@ -241,7 +224,6 @@ Q.unemployed_cpn = 15;
 Q.unemployed_sgp = 1;
 Q.unemployed_bp = 10;
 Q.unemployed_gpv = 1;
-Q.unemployed_other = 1;
 
 Q.catholics_kvp = 20;
 Q.catholics_pvda = 50;
@@ -253,7 +235,6 @@ Q.catholics_cpn = 15;
 Q.catholics_sgp = 1;
 Q.catholics_bp = 10;
 Q.catholics_gpv = 1;
-Q.catholics_other = 1;
 
 Q.protestants_kvp = 20;
 Q.protestants_pvda = 50;
@@ -265,7 +246,6 @@ Q.protestants_cpn = 15;
 Q.protestants_sgp = 1;
 Q.protestants_bp = 10;
 Q.protestants_gpv = 1;
-Q.protestants_other = 1;
 
 Q.kvp_r = 20;
 Q.pvda_r = 50;
@@ -277,7 +257,6 @@ Q.cpn_r = 15;
 Q.sgp_r = 1;
 Q.bp_r = 10;
 Q.gpv_r = 1;
-Q.other_r = 1;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -294,7 +273,7 @@ Q.unemployed = 33;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'upper_middle', 'rural', 'unemployed', 'catholics', 'protestants'];
-Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70','other'];
+Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -308,7 +287,6 @@ Q.workers_cpn = 15;
 Q.workers_sgp = 1;
 Q.workers_bp = 10;
 Q.workers_gpv = 1;
-Q.workers_other = 1;
 
 Q.educated_workers_kvp = 20;
 Q.educated_workers_pvda = 60;
@@ -320,7 +298,6 @@ Q.educated_workers_cpn = 15;
 Q.educated_workers_sgp = 1;
 Q.educated_workers_bp = 5;
 Q.educated_workers_gpv = 1;
-Q.educated_workers_other = 1;
 
 Q.old_middle_kvp = 20;
 Q.old_middle_pvda = 50;
@@ -332,7 +309,6 @@ Q.old_middle_cpn = 15;
 Q.old_middle_sgp = 1;
 Q.old_middle_bp = 10;
 Q.old_middle_gpv = 1;
-Q.old_middle_other = 1;
 
 Q.new_middle_kvp = 20;
 Q.new_middle_pvda = 50;
@@ -344,7 +320,6 @@ Q.new_middle_cpn = 15;
 Q.new_middle_sgp = 1;
 Q.new_middle_bp = 10;
 Q.new_middle_gpv = 1;
-Q.new_middle_other = 1;
 
 Q.upper_middle_kvp = 20;
 Q.upper_middle_pvda = 50;
@@ -356,7 +331,6 @@ Q.upper_middle_cpn = 15;
 Q.upper_middle_sgp = 1;
 Q.upper_middle_bp = 10;
 Q.upper_middle_gpv = 1;
-Q.upper_middle_other = 1;
 
 Q.rural_kvp = 20;
 Q.rural_pvda = 50;
@@ -368,7 +342,6 @@ Q.rural_cpn = 15;
 Q.rural_sgp = 1;
 Q.rural_bp = 10;
 Q.rural_gpv = 1;
-Q.rural_other = 1;
 
 Q.unemployed_kvp = 20;
 Q.unemployed_pvda = 50;
@@ -380,7 +353,6 @@ Q.unemployed_cpn = 15;
 Q.unemployed_sgp = 1;
 Q.unemployed_bp = 10;
 Q.unemployed_gpv = 1;
-Q.unemployed_other = 1;
 
 Q.catholics_kvp = 20;
 Q.catholics_pvda = 50;
@@ -392,7 +364,6 @@ Q.catholics_cpn = 15;
 Q.catholics_sgp = 1;
 Q.catholics_bp = 10;
 Q.catholics_gpv = 1;
-Q.catholics_other = 1;
 
 Q.protestants_kvp = 20;
 Q.protestants_pvda = 50;
@@ -404,7 +375,6 @@ Q.protestants_cpn = 15;
 Q.protestants_sgp = 1;
 Q.protestants_bp = 10;
 Q.protestants_gpv = 1;
-Q.protestants_other = 1;
 
 Q.kvp_r = 20;
 Q.pvda_r = 50;
@@ -416,7 +386,6 @@ Q.cpn_r = 15;
 Q.sgp_r = 1;
 Q.bp_r = 10;
 Q.gpv_r = 1;
-Q.other_r = 1;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -486,16 +455,15 @@ BP: [+ bp_r +]
 # 1967: 3, 1971: 18
 D'66: [+ d66_r +]
 
-CPN
+CPN: [+ CPN_r +]
 
-PSP
+PSP: [+ PSP_r +]
 
-SGP
+SGP: 3
 
-GPV
+GPV: : [+ GPV_r +]
 
 # 1967: 9, 1930: 10
-Other: [+ other_r +]
 
 **Potential coalitions:**
 
