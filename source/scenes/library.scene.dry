@@ -101,7 +101,7 @@ go-to: menu
 
 Current cabinet:
 
-labour: [+ labour_minister_party +]
+Labour: [+ labour_minister_party +]
 
 Interior: [+ interior_minister_party +]
 
@@ -304,7 +304,7 @@ Strength: [+ center_strength : strength +]
 
 Dissent: [+ center_dissent : dissent +]
 
-**labour**
+**Labour**
 
 Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
 
