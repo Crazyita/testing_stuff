@@ -167,8 +167,6 @@ Q.electoral_threshold = 0;
 Q.constitutional_reform = 0;
 // constructive vote of no confidence
 Q.constructive_vonc = 0;
-// reduction in presidential powers
-Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.kpd_banned = 0;
@@ -370,9 +368,6 @@ Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
 
-
-// State of the government
-Q.president = "Hindenburg";
 // starting prime_minister: Wilhelm Marx
 Q.prime_minister = "Cals";
 Q.prime_minister_party = 'KVP';
