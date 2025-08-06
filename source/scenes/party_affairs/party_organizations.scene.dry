@@ -28,6 +28,14 @@ go-to: media
 
 # TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
 
+@women
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival:
+
+Woke...
+
 #the PvdA did not do really do welfare stuff. There were some organisations that helped out elderly party members but those were on a volunteer/donation basis.
 
 @culture
