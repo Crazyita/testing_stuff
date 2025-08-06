@@ -53,7 +53,7 @@ on-departure: ideology = "labour"; labour_strength += 10; labour_dissent -= 5
 
 The labour wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
 
-@free_thinking_ideology
+@free_thinking
 on-arrival: {!
 if (Q.ideology && Q.ideology != "free_thinking") {
     Q.changed = 1;

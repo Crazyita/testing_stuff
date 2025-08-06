@@ -630,23 +630,6 @@ go-to: election_end
 
 # TODO: different paths for the different outcomes...
 
-
-@hitler_victory
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"
-
-With [+ nsdap_candidate +]'s victory, the Nazis waste no time in consolidating power. [? if president = "Göring": His first act is to depose the current prime_minister and appoint Hitler as prime_minister, first undoing his deportation. ?][? if president = "Hitler": His first act is to depose the current prime_minister and appoint himself prime_minister, using his stormtroopers to attack any opposition. ?]
-
-- @hitler_takes_power: What next?
-- @hitler_constitutional: This is unconstitutional!
-
-@seldte_victory
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"
-
-With Seldte's victory, the balance of power passes to the Nazis. [? if hitler_deported: His first act is to depose the current prime_minister and appoint Adolf Hitler as prime_minister, first undoing his deportation. ?][? if not hitler_deported: His first act is to depose the current prime_minister and appoint Adolf Hitler as prime_minister. ?]
-
-- @hitler_takes_power: What next?
-- @hitler_constitutional: This is blatantly unconstitutional!
-
 @hitler_constitutional
 view-if: presidential_powers
 
@@ -678,11 +661,6 @@ on-arrival: constitutional_crisis = 1
 Despite the Nazi threats, supporters of the SPD and the democratic parties refuse to turn out for the referendum, depriving it of the necessary threshold to pass. This is a small victory, as stormtroopers still run rampant in the streets. There is no constitutional path to absolute power, but will that stop the Nazis? 
 
 - @game_over: The ending is yet to be seen...
-
-@ref_lose
-
-- @hitler_takes_power: What next?
-
 
 @election_end
 go-to: eckener_win if winner = "Eckener"; juchacz_win if winner = "Juchacz"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; hitler_victory if winner = "Hitler" or winner = "Göring" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; thalmann_victory if winner = "Thalmann" or winner = "Thälmann"; nazis_lose if winner = "Braun" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"

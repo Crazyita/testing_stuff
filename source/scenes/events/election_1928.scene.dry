@@ -16,7 +16,6 @@ face-image: img/Rothe_Wahlen_1903.jpg
 The Reichstag elections are to be held now.
 
 - @election_algorithm: May we do our best...
-- @cancel_elections
 
 @post_election_1928
 on-arrival: {!
@@ -346,34 +345,6 @@ The Center manages to diffuse some of the hostility from the Reichswehr and the 
 
 - @civil_war: A civil war, then.
 
-
-
-@far_right_coalition
-title: Far-right coalition
-subtitle: NSDAP + DNVP ([+ far_right_coalition +]%)
-view-if: far_right_coalition >= 50
-go-to: far_right_win if (year >= 1932 or nsdap_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and nsdap_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
-priority: 2
-
-There are enough votes for the Nazis and the DNVP to form a coalition. [+ nsdap_leader +] has made his participation in government contingent on being appointed prime_minister. It is up to President [+ president +] to decide.
-
-@far_right_win
-on-arrival: prime_minister = nsdap_leader; prime_minister_party = "NSDAP"
-
-[? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ nsdap_leader +] must be prime_minister [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
-
-- @hitler_takes_power: What do we do now?
-
-
-@far_right_fail
-on-arrival: prime_minister = "Schleicher"; prime_minister_party = "I"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
-
-The reactionary establishment is still very skeptical of the Nazis, so instead, [+ president +] appoints Kurt von Schleicher, a former general, as prime_minister, to try to "tame" the Nazis.
-
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.
-
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
-
 @far_right_braun
 on-arrival: coup_progress += 2
 
@@ -631,39 +602,6 @@ unavailable-subtitle: President Hindenburg will not support a minority governmen
 on-arrival: prime_minister = "Wirth"; prime_minister_party = "Z"; pvda_in_government = 0; spd_toleration = 1; z_relation += 5; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labour_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; pro_republic -= 2;
 
 We have supported a minority government led by the Center Party under prime_minister Joseph Wirth.
-
-
-
-@no_majority_papen
-on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap += 6; unemployed_nsdap += 6; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_nsdap += 5; no_majority_papen_elections += 1; workers_spd -= 8 if pro_republic < 45; workers_spd *= 0.85 if pro_republic < 40; workers_nsdap += 5 if pro_republic < 40;
-
-After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Reichstag is dissolved once more.
-
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
-
-
-@no_majority_papen_2
-on-arrival: prime_minister = "Schleicher"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap += 5; unemployed_nsdap += 10; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_nsdap += 10; workers_spd -= 8 if pro_republic < 45; workers_spd *= 0.85 if pro_republic < 40; workers_nsdap += 5 if pro_republic < 40; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labour_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
-
-There is no path to a majority government. Hindenburg is displeased with Papen, and calls on him to resign. Now, former army general Kurt von Schleicher has been appointed prime_minister, again as part of a presidential government.
-
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.
-
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
-
-
-@no_majority_schleicher
-go-to: hitler_prime_minister
-
-# TODO: there should be a second Schleicher option if the NSDAP isn't the strongest
-
-
-@hitler_prime_minister
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"
-
-There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of prime_minister Adolf Hitler. [? if largest_party == "NSDAP" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
-
-- @hitler_takes_power: What now?
 
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler prime_minister.
 
