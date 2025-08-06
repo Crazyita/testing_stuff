@@ -142,7 +142,7 @@ data = data.concat([
         "legend": "PSP",
         "name": "PSP",
         "seats": Math.round(Q.pvda_r*1.5),
-    }
+    },
     {
         "id": "PvdA",
         "legend": "PvdA",
