@@ -35,25 +35,19 @@ President: [+ president +]
 
 prime_minister: [+ prime_minister +] ([+ prime_minister_party +])
 
-Reichstag composition:
+Tweede Kamer composition:
 
-# 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Labour Party">PvdA</span>!}: [+ pvda_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Catholic People's Party">KVP</span>!}: [+ kvp_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
-Others: [+ other_r +]%
+{!<span class="tooltip-text" title="Anti-Revolutionary Party">ARP</span>!}: [+ ARP_r +]%
+{!<span class="tooltip-text" title="Christian-Historic Union">CHU</span>!}: [+ chu_r +]%
+{!<span class="tooltip-text" title="Popular Party for Freedom and Democracy">VVD</span>!!}: [+ vvd_r +]%
+{!<span class="tooltip-text" title="Communist Party of the Netherlands">CPN</span>!}: [+ cpn_r +]%
+{!<span class="tooltip-text" title="Pacifist-Socialist Party">PSP</span>!}: [+ psp_r +]%
+{!<span class="tooltip-text" title="Political Reformed Party">SGP</span>!}: 2%
+{!<span class="tooltip-text" title="Reformed Political League">GPV</span>!}: [+ gpv_r +]%
+{!<span class="tooltip-text" title="Boerenpartij">BP</span>!}: [+ bp_r +]%
 
 [? if pvda_in_government = 1 : Budget: [+ budget +] ?]
 

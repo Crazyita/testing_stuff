@@ -70,7 +70,6 @@ for (var c of Q.classes) {
 }
 
 // Die Rote Fahne - join the KPD in the May Day march.
-// Mehrheitspartei - form an SPD majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
 if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
     this.achieve('panik_im_mittelstand');
