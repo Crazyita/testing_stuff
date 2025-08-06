@@ -213,7 +213,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'upper_middle', 'rural', 'unemployed', 'catholics', 'protestants'];
-Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70','other'];
+Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
