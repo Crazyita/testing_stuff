@@ -1,7 +1,7 @@
 title: Banking Crisis
 subtitle: The collapse of the German banking system...
 new-page: true
-on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed += 3; crisis_urgency += 1; workers_pvda -= 4 if pvda_in_government; new_middle_pvda -= 5 if pvda_in_government; old_middle_pvda -= 5 if pvda_in_government; rural_pvda -= 4 if pvda_in_government; economic_growth -= 1;
+on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed += 3; crisis_urgency += 1; workers_spd -= 4 if pvda_in_government; new_middle_spd -= 5 if pvda_in_government; old_middle_spd -= 5 if pvda_in_government; rural_spd -= 4 if pvda_in_government; economic_growth -= 1;
 tags: event
 view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1
@@ -20,7 +20,7 @@ This is a bourgeois dispute, but the costs will be borne by the proletariat. The
 
 @nothing_to_do
 view-if: pvda_in_government = 1
-on-arrival: welfare -= 1; workers_pvda -= 3; unemployed_pvda -= 3; pro_republic -= 3
+on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3
 
 There is, essentially, nothing we can do.
 
@@ -28,19 +28,19 @@ There is, essentially, nothing we can do.
 view-if: pvda_in_government = 1
 subtitle: -1 budget
 choose-if: budget >= 1
-on-arrival: workers_pvda += 3*(1-dissent); new_middle_pvda += 3*(1-dissent); old_middle_pvda += 2*(1-dissent); rural_pvda += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 0.9;
+on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 0.9;
 
 In the face of the banking crisis, we have taken emergency action to stabilize the economy by injecting money into the banking system. It might not be enough, but it temporarily staunches the bleeding.
 
 @austerity
 view-if: pvda_in_government = 0
-on-arrival: welfare -= 1; workers_pvda -= 3; unemployed_pvda -= 3; pro_republic -= 3; economic_growth -= 1;
+on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3; economic_growth -= 1;
 
 prime_minister [+ prime_minister +] responds to the banking crisis with more cuts to welfare.
 
 @end_toleration
-view-if: pvda_toleration = 1
-on-arrival: time_to_election = 3; pvda_in_government = 0; in_grand_coalition = 0; pvda_toleration = 0;
+view-if: spd_toleration = 1
+on-arrival: time_to_election = 3; pvda_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
 call: set_next_election_time
 
 We are tired of [+ prime_minister +]'s policy of austerity. After [+ prime_minister +]'s attempt to use emergency powers to pass another welfare cut, we have worked with the other parties to reverse this policy. In response, the Reichstag has been dissolved, and new elections called.
