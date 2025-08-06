@@ -118,7 +118,7 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
+
 on-display: {!
 data = [
     {
@@ -149,7 +149,7 @@ data = data.concat([
         "name": "PvdA",
         "seats": Math.round(Q.pvda_r*1.5),
     }
-];
+]);
 if (Q.d66_exists && Q.d66_r) {
     data.push({
             "id": "D66",
@@ -185,7 +185,7 @@ data = data.concat([
         "name": "ARP"
         "seats": Math.round(Q.arp_r*1.5),
     },
-];
+]);
 if (Q.nmp_exists && Q.nmp_r) {
     data.push({
             "id": "NMP",
