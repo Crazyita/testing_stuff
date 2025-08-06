@@ -14,20 +14,15 @@ Yesterday a new book - 10 over Red - has been released by a group of young PvdA 
 - @welcome: Reduce welfare and social spending.
 - @begone: We will not take any action for now.
 
-@taxes
-on-arrival: upper_tax_rates -= 1; budget -= 1; capital_strike_progress -= 1; unemployed -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5
+@welcome
+on-arrival: new_middle_pvda += 5*(1-dissent); old_middle_pvda -= 4*(1-dissent); old_left_dissent += 5; new_left_dissent -= 5; new_left_strength += 5
 
-Cutting taxes improves our relationship with the capitalists.
+Welcoming this new group makes the old leadership angry.
 
-@welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; new_middle_spd += 4*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd -= 5; unemployed_spd -= 5; unemployed -= 1; left_dissent += 5; labour_dissent += 5; center_dissent += 5; kpd_coalition_dissent += 1; inflation -= 1;
+@begone
+on-arrival: old_left_dissent -= 5; new_left_dissent += 5; new_left_strength -= 5
 
 Cutting welfare improves our relationship with the capitalists, but it hurts our working-class base.
-
-
-@nothing
-
-Realistically, there is nothing we can do.
 
 @watch
 
