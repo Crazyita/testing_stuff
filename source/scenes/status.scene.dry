@@ -40,9 +40,9 @@ Tweede Kamer composition:
 {!<span class="tooltip-text" title="Labour Party">PvdA</span>!}: [+ pvda_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 {!<span class="tooltip-text" title="Catholic People's Party">KVP</span>!}: [+ kvp_r +]%
-{!<span class="tooltip-text" title="Anti-Revolutionary Party">ARP</span>!}: [+ ARP_r +]%
+{!<span class="tooltip-text" title="Anti-Revolutionary Party">ARP</span>!}: [+ arp_r +]%
 {!<span class="tooltip-text" title="Christian-Historic Union">CHU</span>!}: [+ chu_r +]%
-{!<span class="tooltip-text" title="Popular Party for Freedom and Democracy">VVD</span>!!}: [+ vvd_r +]%
+{!<span class="tooltip-text" title="Popular Party for Freedom and Democracy">VVD</span>!}: [+ vvd_r +]%
 {!<span class="tooltip-text" title="Communist Party of the Netherlands">CPN</span>!}: [+ cpn_r +]%
 {!<span class="tooltip-text" title="Pacifist-Socialist Party">PSP</span>!}: [+ psp_r +]%
 {!<span class="tooltip-text" title="Political Reformed Party">SGP</span>!}: 2%
