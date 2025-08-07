@@ -122,7 +122,7 @@ Q.election_records.push(election_result);
 on-display: {!
 data = [
     {
-        "id": "CPN",
+        "id": "cpn",
         "legend": "CPN",
         "name": "CPN",
         "seats": Math.round(Q.cpn_r*1.5),
@@ -130,7 +130,7 @@ data = [
 ];
 if (Q.ppr_exists && Q.ppr_r) {
     data.push({
-            "id": "PPR",
+            "id": "ppr",
             "legend": "PPR",
             "name": "PPR",
             "seats": Math.round(Q.ppr_r*1.5),
@@ -138,13 +138,13 @@ if (Q.ppr_exists && Q.ppr_r) {
 }
 data = data.concat([
     {
-        "id": "PSP",
+        "id": "psp",
         "legend": "PSP",
         "name": "PSP",
         "seats": Math.round(Q.pvda_r*1.5),
     },
     {
-        "id": "PvdA",
+        "id": "pvda",
         "legend": "PvdA",
         "name": "PvdA",
         "seats": Math.round(Q.pvda_r*1.5),
@@ -152,7 +152,7 @@ data = data.concat([
 ]);
 if (Q.d66_exists && Q.d66_r) {
     data.push({
-            "id": "D66",
+            "id": "d66",
             "legend": "D'66",
             "name": "D'66",
             "seats": Math.round(Q.d66_r*1.5),
@@ -160,7 +160,7 @@ if (Q.d66_exists && Q.d66_r) {
 }
 if (Q.ds70_exists && Q.ds70_r) {
     data.push({
-            "id": "DS70",
+            "id": "ds70",
             "legend": "DS'70",
             "name": "DS'70",
             "seats": Math.round(Q.ds70_r*1.5),
@@ -174,48 +174,38 @@ data = data.concat([
         "seats": Math.round(Q.kvp_r*1.5),
     },
     {
-        "id": "CHU",
+        "id": "chu",
         "legend": "CHU"
         "name": "CHU"
         "seats": Math.round(Q.chu_r*1.5),
     },
     {
-        "id": "ARP",
+        "id": "arp",
         "legend": "ARP"
         "name": "ARP"
         "seats": Math.round(Q.arp_r*1.5),
     },
-]);
-if (Q.nmp_exists && Q.nmp_r) {
-    data.push({
-            "id": "NMP",
-            "legend": "NMP",
-            "name": "NMP",
-            "seats": Math.round(Q.nmp_r*1.5),
-            });
-}
-data = data.concat([
     {
-        "id": "GPV",
+        "id": "gpv",
         "legend": "GPV",
         "name": "GPV",
         "seats": Math.round(Q.gpv_r*1.5),
     },
     {
-        "id": "SGP",
+        "id": "sgp",
         "legend": "SGP",
         "name": "SGP",
         "seats": Math.round(3),
     },
     {
-        "id": "BP",
+        "id": "bp",
         "legend": "BP",
         "name": "BP",
         "seats": Math.round(Q.bp_r*1.5),
     },
     #apparently the VVD sat right of the BP
     {
-        "id": "VVD",
+        "id": "vvd",
         "legend": "VVD",
         "name": "VVD",
         "seats": Math.round(Q.vvd_r*1.5),
