@@ -71,14 +71,14 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 
 // The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+Q.largest_party = 'PvdA';
+if (Q.kvp >= Q.pvda) {
+    Q.largest_party = 'KVP';
 }
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
-}
+//if (Q.cda_r >= Q.pvda_r) {
+//    Q.largest_party = 'CDA';
+//}
 
 // coalitions
 Q.roomsrood_coalition = Q.pvda_r + Q.kvp_r + Q.arp_r;
@@ -107,7 +107,7 @@ Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
 Q.in_left_front = 0;
 
-@@ -99,19 +115,47 @@ Q.in_popular_front = 0;
+Q.in_popular_front = 0;
 Q.in_emergency_government = 0;
 Q.in_minority_government = 0;
 Q.in_unity_government = 0;
@@ -121,11 +121,6 @@ Q.reichswehr_minister_party = 'I';
 Q.economic_minister_party = 'PvdA';
 Q.finance_minister_party = 'DVP';
 Q.agriculture_minister_party = 'Z';
-
-// understanding the enemy
-if (Q.nsdap_r >= 15) {
-    Q.understanding_enemy_timer = 2;
-}
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
