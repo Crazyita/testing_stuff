@@ -102,7 +102,7 @@ Q.interior_minister_party = 'Z';
 Q.justice_minister_party = 'I';
 Q.labour_minister_party = 'Z';
 Q.reichswehr_minister_party = 'I';
-Q.economic_minister_party = 'I';
+Q.economic_minister_party = Q.ddp_name;
 Q.finance_minister_party = 'DVP';
 Q.agriculture_minister_party = 'Z';
 
