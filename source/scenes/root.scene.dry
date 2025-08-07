@@ -102,6 +102,9 @@ Q.arp_relation = 50;
 Q.psp_relation = 40;
 Q.vvd_relation = 20;
 Q.cpn_relation = 35;
+Q.d66_relation = 60;
+Q.PPR_relation = 70; 
+Q.ds70_relation = 30;
 // BP, SGP and CHU are invariably hostile
 Q.sgp_relation = 10;
 Q.BP_relation = 10;

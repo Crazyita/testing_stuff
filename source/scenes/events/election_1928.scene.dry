@@ -171,7 +171,7 @@ data = data.concat([
         "id": "kvp",
         "legend": "KVP",
         "name": "KVP",
-        "seats": Math.round((Q.kvp_r*1.5),
+        "seats": Math.round(Q.kvp_r*1.5),
     },
     {
         "id": "CHU",
@@ -296,90 +296,9 @@ Confessional coalition (KVP + ARP + CHU): [+ confessional_coalition +]
 - @no_majority
 - @brauns_dilemma
 - @left_coalition
-- @popular_front_coalition
 - @right_coalition
 
 # TODO: black-brown coalition
-
-
-@popular_front_coalition
-title: A new "Popular Front" coalition?
-subtitle: pvda + KPD + Z + [+ ddp_name +]  [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%)
-unavailable-subtitle: pvda + KPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%) - [? if ((kpd_relation < 65 and kpd_party_leader == "Thälmann") or (kpd_relation < 45 and kpd_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (z_relation < 45 and z_party_leader == "Joos") or (z_relation < 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation < 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
-view-if: popular_front_coalition >= 50
-choose-if: (((kpd_relation >= 65 and kpd_party_leader == "Thälmann") or (kpd_relation >= 45 and kpd_party_leader == "Conciliators")) and ((z_relation >= 45 and z_party_leader == "Joos") or (z_relation >= 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation >= 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and kpd_party_leader == "Conciliators" and z_relation >= 30 and kpd_relation >= 30)
-
-Could we really form a coalition that included both the Center and the Communists? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
-
-The far-right might attempt a coup, if such a coalition were formed.
-
-- @popular_front_2: Form the Popular Front!
-- @great_popular_front: Form the Popular Front!
-
-@popular_front_2
-view-if: z_party_leader != "Joos" or kpd_party_leader != "Conciliators"
-
-Somehow, both the Communists and Center are at the very least willing to entertain negotiations. Of course, KPD radicals and Center conservatives derail the negotiations almost immediately. The KPD demands leadership of the coalition for themselves and their chairman Ernst Thälmann, [? if pvda_r > kpd_r : despite our higher vote share, ?]while the Center is offended by the prospect of helping Bolsheviks enter government. *Something* must be done to restore balance.
-
-- @popular_front_resources
-- @popular_front_democracy
-- @popular_front_braun
-- @coalition_menu: This is impossible. Try another governing arrangement.
-
-@popular_front_resources
-title: Use our resources to smooth things over.
-unavailable-subtitle: Required: 4 resources
-subtitle: -4 resources
-choose-if: resources >= 4
-on-arrival: resources -= 4
-go-to: popular_front_success
-
-@popular_front_democracy
-title: Convince the KPD to accept democracy.
-subtitle: [? if kpd_party_leader == "Conciliators" : The Conciliator leadership of the KPD at least claim to support the Popular Front. ?]
-unavailable-subtitle: Our relationship with the KPD is not high enough.
-choose-if: (kpd_relation >= 60 and communist_coalition >= 3) or kpd_party_leader == "Conciliators"
-go-to: popular_front_success
-
-@popular_front_braun
-title: Use pressure from President Braun to force the parties to cooperate.
-view-if: president == "Braun"
-go-to: popular_front_success
-
-@great_popular_front
-view-if: z_party_leader == "Joos" and kpd_party_leader == "Conciliators"
-on-arrival: pvda_in_government = 1; in_popular_front = 1; prime_minister = "Breitscheid"; prime_minister_party = "pvda"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
-achievement: grosse_volksfront
-go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
-
-Somehow, the coalition is successfully formed! The conciliatory leadership of the Center Party and KPD helped make the negotiations possible. We still need a prime_minister; the only acceptable choice among the parties was Rudolf Breitscheid of the pvda, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
-
-@popular_front_success
-on-arrival: pvda_in_government = 1; in_popular_front = 1; prime_minister = "Breitscheid"; prime_minister_party = "pvda"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
-go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
-achievement: volksfront
-
-Somehow, surprisingly, the coalition is successfully formed! We still need a prime_minister; the only acceptable choice among the parties was Rudolf Breitscheid of the pvda, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
-
-@popular_front_no_civil_war
-on-arrival: kpd_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; economic_minister_party = "Z"; labour_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage += kpd_r
-achievement: volksfront
-
-In response to the KPD's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
-
-The KPD has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them.
-
-- @ministries: First, we must select our ministries.
-
-
-@popular_front_civil_war
-on-arrival: kpd_relation = 80; reichswehr_loyalty += 0.25;
-
-In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
-
-The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the KPD, whether we want to or not.
-
-- @civil_war: A civil war, then.
 
 @far_right_braun
 on-arrival: coup_progress += 2
@@ -640,48 +559,6 @@ We have supported a minority government led by the Center Party under prime_mini
 
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler prime_minister.
 
-@pvda_majority
-title: pvda majority alone
-subtitle: pvda: [+ pvda_r +]%
-view-if: pvda_r >= 50
-on-arrival: prime_minister = "Empty"; prime_minister_party = "pvda"; pvda_in_government = 1; in_pvda_majority = 1; pro_republic += 5; foreign_minister_party = "pvda"; foreign_minister = "Breitscheid"; interior_minister_party = "pvda"; interior_minister = "Severing"; justice_minister_party = "pvda"; justice_minister = "Radbruch"; labour_minister_party = "pvda"; labour_minister = "Wissell"; reichswehr_minister_party = "pvda"; reichswehr_minister = "Leber"; economic_minister_party = "pvda"; economic_minister = "Schmidt"; finance_minister_party = "pvda"; finance_minister = "Hilferding"; agriculture_minister_party = "pvda"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
-achievement: majority_party
-
-Finally, the pvda can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
-
-Who should be prime_minister?
-
-- @braun_majority_prime_minister: Otto Braun for prime_minister.
-- @breitscheid_majority_prime_minister: Rudolf Breitscheid for prime_minister.
-- @muller_majority_prime_minister: Hermann Müller for prime_minister.
-- @wels_majority_prime_minister: Otto Wels for prime_minister.
-
-@braun_majority_prime_minister
-view-if: not historical_mode or not pvda_prussia
-on-arrival: prime_minister = "Braun"
-
-[? if president == "Braun": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the prime_minister also being the President (the President may not be a member of the Reichstag; there is no law saying that the prime_minister must be a member of the Reichstag). Thus, we have prime_minister-President Otto Braun. ?]
-[? if president != "Braun": Otto Braun has become prime_minister of the pvda majority. ?]
-
-@breitscheid_majority_prime_minister
-on-arrival: prime_minister = "Breitscheid"
-
-Rudolf Breitscheid has become prime_minister of the pvda majority.
-
-@muller_majority_prime_minister
-view-if: muller_dead = 0
-on-arrival: prime_minister = "Müller"
-
-Hermann Müller has become prime_minister of the pvda majority.
-
-@wels_majority_prime_minister
-view-if: muller_dead = 1
-on-arrival: prime_minister = "Wels"
-
-Otto Wels has become prime_minister of the pvda majority.
-
-# TODO: Otto Wels should be able to be prime_minister of a Grand Coalition, Weimar Coalition, or pvda majority after Müller dies.
-
 
 @brauns_dilemma
 title: There is no clear governing majority.
@@ -832,35 +709,18 @@ Q.new_middle_pvda -= 5;
 Q.old_middle_pvda -= 5;
 Q.rural_pvda -= 5;
 Q.catholics_pvda -= 3;
-Q.new_middle_dvp -= 8;
-Q.old_middle_dvp -= 8;
-Q.new_middle_ddp -= 5;
-Q.old_middle_ddp -= 10;
-Q.rural_dnvp -= 5;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 6;
-Q.new_middle_nsdap += 6;
-Q.rural_nsdap += 6;
-Q.unemployed_nsdap += 5;
 // Thresholds are kind of arbitrary - adjusted because of negative economic effects on pro_republic
 if (Q.pro_republic < 45 && Q.pro_republic >= 36) {
     Q.workers_pvda -= 6;
 }
 if (Q.pro_republic < 36) {
     // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
-    Q.z_relation -= 5;
-    Q.dvp_relation -= 5;
     Q.workers_pvda *= 0.85;
     Q.unemployed_pvda -= 2;
     Q.new_middle_pvda -= 5;
     Q.old_middle_pvda -= 5;
     Q.rural_pvda -= 5;
-    Q.catholics_pvda -= 3;
-    Q.workers_nsdap += 8;
-    Q.old_middle_nsdap += 8;
-    Q.new_middle_nsdap += 8;
-    Q.rural_nsdap += 8;
-    Q.unemployed_nsdap += 8;   
+    Q.catholics_pvda -= 3;  
 }
 !}
 
