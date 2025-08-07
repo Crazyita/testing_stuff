@@ -110,7 +110,6 @@ Q.sgp_relation = 10;
 Q.BP_relation = 10;
 Q.CHU_relation = 10
 
-Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
