@@ -182,7 +182,7 @@ data = [
         "name": "VVD",
         "seats": Math.round(Q.vvd_r*1.5),
     },
-]);
+];
 
 if (window && d3) {
     var width = 500; 
