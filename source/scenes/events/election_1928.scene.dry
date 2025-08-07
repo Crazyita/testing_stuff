@@ -120,14 +120,13 @@ Q.election_records.push(election_result);
 !}
 
 on-display: {!
-data = [
-    {
+data = [ ]
+data.push({
         "id": "cpn",
         "legend": "CPN",
         "name": "CPN",
         "seats": Math.round(Q.cpn_r*1.5),
-    }
-];
+});
 if (Q.ppr_exists && Q.ppr_r) {
     data.push({
             "id": "ppr",
@@ -136,27 +135,25 @@ if (Q.ppr_exists && Q.ppr_r) {
             "seats": Math.round(Q.ppr_r*1.5),
             });
 }
-data = data.concat([
-    {
+data.push({
         "id": "psp",
         "legend": "PSP",
         "name": "PSP",
         "seats": Math.round(Q.pvda_r*1.5),
-    },
-    {
+    });
+data.push({
         "id": "pvda",
         "legend": "PvdA",
         "name": "PvdA",
         "seats": Math.round(Q.pvda_r*1.5),
-    }
-]);
+});
 if (Q.d66_exists && Q.d66_r) {
     data.push({
             "id": "d66",
             "legend": "D'66",
             "name": "D'66",
             "seats": Math.round(Q.d66_r*1.5),
-            });
+    });
 }
 if (Q.ds70_exists && Q.ds70_r) {
     data.push({
@@ -164,53 +161,51 @@ if (Q.ds70_exists && Q.ds70_r) {
             "legend": "DS'70",
             "name": "DS'70",
             "seats": Math.round(Q.ds70_r*1.5),
-            });
+    });
 }
-data = data.concat([
-    {
+data.push({
         "id": "kvp",
         "legend": "KVP",
         "name": "KVP",
         "seats": Math.round(Q.kvp_r*1.5),
-    },
-    {
+});
+data.push({
         "id": "chu",
         "legend": "CHU"
         "name": "CHU"
         "seats": Math.round(Q.chu_r*1.5),
-    },
-    {
+});
+data.push({
         "id": "arp",
         "legend": "ARP"
         "name": "ARP"
         "seats": Math.round(Q.arp_r*1.5),
-    },
-    {
+});
+data.push({
         "id": "gpv",
         "legend": "GPV",
         "name": "GPV",
         "seats": Math.round(Q.gpv_r*1.5),
-    },
-    {
+});
+data.push({
         "id": "sgp",
         "legend": "SGP",
         "name": "SGP",
         "seats": Math.round(3),
-    },
-    {
+    });
+data.push({
         "id": "bp",
         "legend": "BP",
         "name": "BP",
         "seats": Math.round(Q.bp_r*1.5),
-    },
+});
     #apparently the VVD sat right of the BP
-    {
+data.push({
         "id": "vvd",
         "legend": "VVD",
         "name": "VVD",
         "seats": Math.round(Q.vvd_r*1.5),
-    },
-]);
+});
 
 if (window && d3) {
     var width = 500; 
