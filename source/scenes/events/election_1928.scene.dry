@@ -84,7 +84,7 @@ if (Q.kvp >= Q.pvda) {
 Q.roomsrood_coalition = Q.pvda_r + Q.kvp_r + Q.arp_r;
 //Q.christiansocialist_coalition = Q.pvda_r + Q.cda_r + Q.d66_r; 
 //Q.christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r;
-Q//.large_christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r + Q.ds70_r;
+//Q.large_christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r + Q.ds70_r;
 Q.progressivechristian_coalition = Q.pvda_r + Q.ppr_r + Q.d66_r + Q.kvp_r + Q.arp_r;
 Q.purple_coalition = Q.pvda_r + Q.d66_r + Q.vvd_r;
 //semi-impossible coalitions
