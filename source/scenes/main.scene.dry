@@ -52,8 +52,8 @@ is-deck: true
 
 @govt
 title: Government Affairs
-view-if: time >= 6
-card-image: img/reichstag_2.jpg
+view-if: pvda_in_government == 1
+card-image: img/temporary.jpg
 is-deck: true
 
 - #govt_affairs
