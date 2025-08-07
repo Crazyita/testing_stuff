@@ -2,7 +2,7 @@ title: The Right calls a vote of no confidence against the current government!
 subtitle: We have angered our coalition partners too much...
 new-page: true
 on-arrival: tried_supporting_kpd = 0
-view-if: pvda_in_government = 1
+view-if: pvda_in_government = 1 and year = 1966 and month = 1
 tags: event
 go-to: vonc_menu
 
