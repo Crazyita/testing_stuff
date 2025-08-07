@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1966;
+Q.year = 1928;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -46,28 +46,32 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['old left', 'new left', 'labour', 'free_thinking'];
+Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
-Q.old_left_strength = 40;
-Q.old_left_dissent = 5;
-Q.labour_strength = 45;
-Q.labour_dissent = 5;
-Q.new_left_strength = 5;
-Q.new_left_dissent = 20;
-Q.free_thinking_strength = 10;
-Q.free_thinking_dissent = 10;
+Q.left_strength = 15;
+Q.left_dissent = 20;
+Q.center_strength = 30;
+Q.center_dissent = 0;
+Q.labor_strength = 25;
+Q.labor_dissent = 5;
+Q.reformist_strength = 25;
+Q.reformist_dissent = 5;
+Q.neorevisionist_strength = 5;
+Q.neorevisionist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
-Q.old_left_resign = 0;
-Q.new_left_split = 0;
-Q.free_thinking_resigned = 0;
+Q.centrists_resign = 0;
+Q.left_split = 0;
+Q.reformists_resigned = 0;
 
-// have we discovered the new left?
-Q.new_left = 0;
+// have we discovered neorevisionism?
+Q.neorevisionism = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
+// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
+Q.nazi_urgency = 0;
 // radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
@@ -97,25 +101,30 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.kvp_relation = 30;
-Q.arp_relation = 50;
-Q.psp_relation = 40;
-Q.vvd_relation = 20;
-Q.cpn_relation = 35;
-Q.d66_relation = 60;
-Q.PPR_relation = 70; 
-Q.ds70_relation = 30;
-// BP, SGP and CHU are invariably hostile
-Q.sgp_relation = 10;
-Q.BP_relation = 10;
-Q.CHU_relation = 10
+Q.z_relation = 50;
+Q.kpd_relation = 25;
+Q.ddp_relation = 60;
+Q.dvp_relation = 35;
+// DNVP and NSDAP are invariably hostile
+Q.DNVP_relation = 10;
+Q.NSDAP_relation = 0;
 
+Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
+
+// hmm... maybe we can play nice with Hindenburg???
+Q.hindenburg_relation = 25;
+
+
+// Does the SPD lead in Prussia?
+Q.spd_prussia = 1;
+// Options: spd, z, dnvp, papen, nsdap
+Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -169,6 +178,8 @@ Q.electoral_threshold = 0;
 Q.constitutional_reform = 0;
 // constructive vote of no confidence
 Q.constructive_vonc = 0;
+// reduction in presidential powers
+Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.kpd_banned = 0;
@@ -184,16 +195,13 @@ Q.budget = 4;
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
 Q.workers = 48; // industry and trade
-Q.educated_workers = 48;
-Q.upper_middle = 10;
 Q.old_middle = 13; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
 Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 4;
+Q.unemployed = 8.6;
 Q.catholics = 30;
-Q.protestants = 35;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -217,149 +225,100 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'educated_workers', 'old_middle', 'new_middle', 'upper_middle', 'rural', 'unemployed', 'catholics', 'protestants'];
-Q.parties = ['kvp', 'pvda', 'vvd', 'arp', 'chu', 'psp', 'cpn', 'sgp', 'bp', 'gpv', 'd66', 'ppr', 'ds70'];
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_kvp = 20;
-Q.workers_pvda = 50;
-Q.workers_vvd = 5;
-Q.workers_arp = 20;
-Q.workers_chu = 5;
-Q.workers_psp = 5;
-Q.workers_cpn = 15;
-Q.workers_sgp = 1;
-Q.workers_bp = 10;
-Q.workers_gpv = 1;
+Q.workers_spd = 60;
+Q.workers_kpd = 20;
+Q.workers_z = 5;
+Q.workers_ddp = 0;
+Q.workers_dvp = 0;
+Q.workers_dnvp = 5;
+Q.workers_nsdap = 0;
+Q.workers_other = 10;
 
-Q.educated_workers_kvp = 20;
-Q.educated_workers_pvda = 60;
-Q.educated_workers_vvd = 5;
-Q.educated_workers_arp = 20;
-Q.educated_workers_chu = 5;
-Q.educated_workers_psp = 5;
-Q.educated_workers_cpn = 15;
-Q.educated_workers_sgp = 1;
-Q.educated_workers_bp = 5;
-Q.educated_workers_gpv = 1;
+Q.old_middle_spd = 5;
+Q.old_middle_kpd = 0;
+Q.old_middle_z = 5;
+Q.old_middle_ddp= 10;
+Q.old_middle_dvp = 25;
+Q.old_middle_dnvp = 25;
+Q.old_middle_nsdap = 10;
+Q.old_middle_other = 10;
 
-Q.old_middle_kvp = 20;
-Q.old_middle_pvda = 50;
-Q.old_middle_vvd = 5;
-Q.old_middle_arp = 20;
-Q.old_middle_chu = 5;
-Q.old_middle_psp = 5;
-Q.old_middle_cpn = 15;
-Q.old_middle_sgp = 1;
-Q.old_middle_bp = 10;
-Q.old_middle_gpv = 1;
+Q.new_middle_spd = 5;
+Q.new_middle_kpd = 1;
+Q.new_middle_z = 10;
+Q.new_middle_ddp= 25;
+Q.new_middle_dvp = 25;
+Q.new_middle_dnvp = 10;
+Q.new_middle_nsdap = 5;
+Q.new_middle_other = 15;
 
-Q.new_middle_kvp = 20;
-Q.new_middle_pvda = 50;
-Q.new_middle_vvd = 5;
-Q.new_middle_arp = 20;
-Q.new_middle_chu = 5;
-Q.new_middle_psp = 5;
-Q.new_middle_cpn = 15;
-Q.new_middle_sgp = 1;
-Q.new_middle_bp = 10;
-Q.new_middle_gpv = 1;
+Q.rural_spd = 10;
+Q.rural_kpd = 0;
+Q.rural_z = 5;
+Q.rural_ddp= 5;
+Q.rural_dvp = 15;
+Q.rural_dnvp = 45;
+Q.rural_nsdap = 5;
+Q.rural_other = 10;
 
-Q.upper_middle_kvp = 20;
-Q.upper_middle_pvda = 50;
-Q.upper_middle_vvd = 5;
-Q.upper_middle_arp = 20;
-Q.upper_middle_chu = 5;
-Q.upper_middle_psp = 5;
-Q.upper_middle_cpn = 15;
-Q.upper_middle_sgp = 1;
-Q.upper_middle_bp = 10;
-Q.upper_middle_gpv = 1;
+Q.unemployed_spd = 25;
+Q.unemployed_kpd = 55;
+Q.unemployed_z = 1;
+Q.unemployed_ddp = 0;
+Q.unemployed_dvp = 0;
+Q.unemployed_dnvp = 5;
+Q.unemployed_nsdap = 15;
+Q.unemployed_other = 9;
 
-Q.rural_kvp = 20;
-Q.rural_pvda = 50;
-Q.rural_vvd = 5;
-Q.rural_arp = 20;
-Q.rural_chu = 5;
-Q.rural_psp = 5;
-Q.rural_cpn = 15;
-Q.rural_sgp = 1;
-Q.rural_bp = 10;
-Q.rural_gpv = 1;
-
-Q.unemployed_kvp = 20;
-Q.unemployed_pvda = 50;
-Q.unemployed_vvd = 5;
-Q.unemployed_arp = 20;
-Q.unemployed_chu = 5;
-Q.unemployed_psp = 5;
-Q.unemployed_cpn = 15;
-Q.unemployed_sgp = 1;
-Q.unemployed_bp = 10;
-Q.unemployed_gpv = 1;
-
-Q.catholics_kvp = 50;
-Q.catholics_pvda = 10;
-Q.catholics_vvd = 5;
-Q.catholics_arp = 1;
-Q.catholics_chu = 1;
-Q.catholics_psp = 5;
-Q.catholics_cpn = 1;
-Q.catholics_sgp = 1;
-Q.catholics_bp = 2;
-Q.catholics_gpv = 1;
-
-Q.protestants_kvp = 1;
-Q.protestants_pvda = 10;
-Q.protestants_vvd = 5;
-Q.protestants_arp = 40;
-Q.protestants_chu = 30;
-Q.protestants_psp = 2;
-Q.protestants_cpn = 5;
-Q.protestants_sgp = 1;
-Q.protestants_bp = 4;
-Q.protestants_gpv = 1;
+Q.catholics_spd = 15;
+Q.catholics_kpd = 2;
+Q.catholics_z = 50;
+Q.catholics_ddp = 0;
+Q.catholics_dvp = 5;
+Q.catholics_dnvp = 5;
+Q.catholics_nsdap = 0;
+Q.catholics_other = 12;
 
 
-// Starting Tweede Kamer composition
-// % of Tweede Kamer in Jan 1966
+// Current Reichstag composition
+// % of Reichstag in Jan 1928
 // source: wikipedia
-
-Q.pvda_r = 29;
-Q.kvp_r = 33;
-Q.arp_r = 9;
-Q.chu_r = 8;
-Q.vvd_r = 11;
-Q.psp_r = 3;
-Q.cpn_r = 2;
-Q.sgp_r = 2;
-Q.bp_r = 2;
-Q.gpv_r = 1;
+// note: the Z figures also include the BVP (Bavarian people's party)
+// since they were ideologically similar, but they were separate parties.
+// They did not have a CDU/CSU-style relationship.
+Q.spd_r = 26;
+Q.kpd_r = 9;
+Q.z_r = 17;
+Q.ddp_r = 6;
+Q.dvp_r = 10;
+Q.dnvp_r = 20;
+Q.nsdap_r = 3;
+Q.other_r = 9;
 
 // diff from prev
-Q.old_pvda_r = 29;
-Q.old_kvp_r = 33;
-Q.old_arp_r = 9;
-Q.old_chu_r = 8;
-Q.old_vvd_r = 11;
-Q.old_psp_r = 3;
-Q.old_cpn_r = 2;
-Q.old_sgp_r = 2;
-Q.old_bp_r = 2;
-Q.old_gpv_r = 1;
+Q.old_spd_r = 26;
+Q.old_kpd_r = 9;
+Q.old_z_r = 17;
+Q.old_ddp_r = 6;
+Q.old_dvp_r = 10;
+Q.old_dnvp_r = 20;
+Q.old_nsdap_r = 3;
+Q.old_other_r = 9;
 
-// splitters 
-Q.ds70_r = 0;
-Q.old_ds70_r = 0;
-Q.d66_r = 0;
-Q.old_d66_r = 0;
-Q.ppr_r = 0;
-Q.old_ppr_r = 0;
+// sapd isn't formed yet, but it may be formed
+Q.sapd_r = 0;
+Q.old_sapd_r = 0;
 
+// for changing the DDP's name to the DStP
+Q.ddp_name = "DDP";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -368,16 +327,19 @@ Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
 
-// starting prime_minister: Wilhelm Marx
-Q.prime_minister = "Cals";
-Q.prime_minister_party = 'KVP';
-Q.pvda_in_government = 1;
-Q.kvp_in_government = 1;
-Q.chu_in_government = 0;
-Q.arp_in_government = 1;
-Q.vvd_in_government = 0;
-Q.cpn_in_government = 0;
-Q.ds70_in_government = 0;
+
+// State of the government
+Q.president = "Hindenburg";
+// starting chancellor: Wilhelm Marx
+Q.chancellor = "Marx";
+Q.chancellor_party = 'Z';
+Q.spd_in_government = 0;
+Q.z_in_government = 1;
+Q.ddp_in_government = 0;
+Q.dvp_in_government = 1;
+Q.dnvp_in_government = 1;
+Q.kpd_in_government = 0;
+Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
@@ -391,6 +353,7 @@ Q.in_popular_front = 0;
 Q.in_left_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
+Q.in_spd_majority = 0;
 Q.grand_coalition_failed = 0;
 // if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;
@@ -416,8 +379,8 @@ Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'DNVP';
 Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'DNVP';
-Q.labour_minister = 'Brauns';
-Q.labour_minister_party = 'Z';
+Q.labor_minister = 'Brauns';
+Q.labor_minister_party = 'Z';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister = 'Curtius';
@@ -503,16 +466,16 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'party_disunity',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
-            'foreign_policy', 'judiciary', 'labour_affairs', 'military_policy',
+            'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
             'police', 'prussian_affairs', 'shuffle_cabinet', 'social_welfare',
             'homosexual_rights', 'economic_policy', 'coalition_affairs',
             'war_guilt', 'womens_rights', 'economic_democracy',
             'dealing_with_toleration',
-            'constitutional_reform', 'labour_rights',
+            'constitutional_reform', 'labor_rights',
             'education_science', 'curriculum',
             // events
             'emergency_cuts', 'unemployment_insurance',
-            'sa_ban', 'sh_ban', 'papen_prime_minister',
+            'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes'];
@@ -549,7 +512,7 @@ Q.economic_policy_timer = 0;
 Q.fiscal_policy_timer = 0;
 Q.foreign_policy_timer = 0;
 Q.judiciary_timer = 0;
-Q.labour_affairs_timer = 0;
+Q.labor_affairs_timer = 0;
 Q.military_policy_timer = 0;
 Q.police_timer = 0;
 Q.prussian_affairs_timer = 0;
@@ -594,7 +557,7 @@ Q.braun_advisor = 0; // Otto Braun
 Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 
-// labour advisors
+// Labor advisors
 Q.leipart_advisor = 0; // Theodor Leipart
 Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
@@ -622,20 +585,20 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1966_easy: Begin (easy difficulty)
-- @1966_main: Begin (normal difficulty)
-- @1966_hard: Begin (hard difficulty)
-- @1966_historical: Begin (historical mode)
+- @1928_easy: Begin (easy difficulty)
+- @1928_main: Begin (normal difficulty)
+- @1928_hard: Begin (hard difficulty)
+- @1928_historical: Begin (historical mode)
 
-@1966_easy
+@1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
-go-to: 1966_main
+go-to: 1928_main
 
-@1966_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labour_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
-go-to: 1966_main
+@1928_hard
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+go-to: 1928_main
 
-@1966_historical
+@1928_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
@@ -645,7 +608,7 @@ Q.dues = 1;
 Q.rb_strength = 2000;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
-Q.labour_dissent = 25;
+Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpd_relation = 16;
@@ -653,17 +616,15 @@ Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
-go-to: 1966_main
+go-to: 1928_main
 
-@1966_main
+@1928_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1966
+= 1928
 
-The 1960s have been a fairly calm time in the Netherlands so far, if compared to the rest of the world. The war in Vietnam rages on, while last year the christian-liberal government collapsed over a new media law, after which we formed a red-catholic coalition. 
+It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
 
-In Amsterdam youngsters are protesting the marriage of Crown Princess Juliana with prince Claus. But still, the situation is overall calm. The economy is, however, mediocre, with high inflation that we are unable to curb properly.
-
-
+Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
