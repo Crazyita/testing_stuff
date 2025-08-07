@@ -229,6 +229,7 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
+
 go-to: coalition_menu
 
 = Election results
@@ -237,17 +238,23 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **PvdA:** {!</td><td>!} **[+ pvda_r +]%** {!</td><td>!} **[+ str_change_pvda +]** {!</td></tr>!}
 
 [? if ds70_exists : {!<tr><td><div class="box" style='background-color:#AA00AA'> </div> !}DS'70: {!</td><td>!} [+ ds70_r +]% {!</td><td>!} [+ str_change_ds70 +] {!</td></tr>!} ?]
+
 [? if d66_exists : {!<tr><td><div class="box" style='background-color:#32CD32'> </div> !}D66: {!</td><td>!} [+ d66_r +]% {!</td><td>!} [+ str_change_d66 +] {!</td></tr>!} ?]
+
 [? if ppr_exists : {!<tr><td><div class="box" style='background-color:#2C429E'> </div> !}PPR: {!</td><td>!} [+ ppr_r +]% {!</td><td>!} [+ str_change_ppr +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#F0CB47'> </div> !}KVP: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ str_change_kvp +] {!</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#4161A5'> </div> !}ARP: {!</td><td>!} [+ arp_r +]% {!</td><td>!} [+ str_change_arp +] {!</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#333333'> </div> !}CHU: {!</td><td>!} [+ chu_r +]% {!</td><td>!} [+ str_change_chu +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#FF3366'> </div> !} PSP: {!</td><td>!} [+ psp_r +]% {!</td><td>!} [+ str_change_psp +] {!</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#BB5555'> </div> !} CPN: {!</td><td>!} [+ cpn_r +]% {!</td><td>!} [+ str_change_cpn +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#EE7C10'> </div> !} SGP: {!</td><td>!} [+ sgp_r +]% {!</td><td>!} [+ str_change_sgp +]  {!</td></tr>!}
@@ -267,15 +274,15 @@ Christian-Liberal (KVP + VVD + ARP + CHU): [+ christianliberal_coalition +]%
 
 Large Christian-Liberal (KVP + VVD + ARP + CHU + DS'70): [+ large_christianliberal_coalition +]%
 
-Progressive-Christian (PvdA + PPR + D66 + KVP + ARP): [+ progressivechristian_coalition +] 
+Progressive-Christian (PvdA + PPR + D66 + KVP + ARP): [+ progressivechristian_coalition +]%
 
-Progressive Trio (PvdA + PPR + D66): [+ progressive_trio_coalition +] 
+Progressive Trio (PvdA + PPR + D66): [+ progressive_trio_coalition +]%
 
-Progressive Fourleaf (PvdA + PPR + D66 + PSP): [+ progressive_four_leaf_coalition +]
+Progressive Fourleaf (PvdA + PPR + D66 + PSP): [+ progressive_four_leaf_coalition +]%
 
-Wide left-wing coalition (PvdA + D66 + PPR + PSP + CPN): [+ left_coalition +] 
+Wide left-wing coalition (PvdA + D66 + PPR + PSP + CPN): [+ left_coalition +]%
 
-Confessional coalition (KVP + ARP + CHU): [+ confessional_coalition +] 
+Confessional coalition (KVP + ARP + CHU): [+ confessional_coalition +]%
 
 @coalition_menu
 
