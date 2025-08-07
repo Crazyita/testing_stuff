@@ -82,17 +82,17 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 
 // coalitions
 Q.roomsrood_coalition = Q.pvda_r + Q.kvp_r + Q.arp_r;
-Q.christiansocialist_coalition = Q.pvda_r + Q.cda_r + Q.d66_r; 
-Q.christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r;
-Q.large_christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r + Q.ds70_r;
+//Q.christiansocialist_coalition = Q.pvda_r + Q.cda_r + Q.d66_r; 
+//Q.christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r;
+Q//.large_christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r + Q.ds70_r;
 Q.progressivechristian_coalition = Q.pvda_r + Q.ppr_r + Q.d66_r + Q.kvp_r + Q.arp_r;
 Q.purple_coalition = Q.pvda_r + Q.d66_r + Q.vvd_r;
 //semi-impossible coalitions
 //seriously if somebody achieves those through PR that would be insane
 //through FPTP some/all of those could be possible though
-Q.progressive_trio_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r;
-Q.progressive_four_leaf_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r + Q.psp_r;
-Q.left_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r + Q.psp_r + Q.cpn_r;
+//Q.progressive_trio_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r;
+//Q.progressive_four_leaf_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r + Q.psp_r;
+//Q.left_coalition = Q.pvda_r + Q.d66_r + Q.ppr_r + Q.psp_r + Q.cpn_r;
 //somehow the confessional majority has returned
 Q.confessional_coalition = Q.kvp_r + Q.arp_r + Q.chu_r; 
 
@@ -290,7 +290,7 @@ Confessional coalition (KVP + ARP + CHU): [+ confessional_coalition +]
 
 @coalition_menu
 
-
+go-to: ministries
 
 @ministries
 
