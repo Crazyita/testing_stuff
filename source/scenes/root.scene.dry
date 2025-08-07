@@ -49,7 +49,7 @@ Q.dissent_percent = 5;
 Q.factions = ['old left', 'new left', 'labour', 'free_thinking'];
 // should this be normalized to 100%?
 Q.old_left_strength = 40;
-Q.old_left_dissent = 0;
+Q.old_left_dissent = 5;
 Q.labour_strength = 45;
 Q.labour_dissent = 5;
 Q.new_left_strength = 5;
