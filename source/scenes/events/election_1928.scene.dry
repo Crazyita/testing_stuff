@@ -71,7 +71,6 @@ Q.christiansocialist_coalition = Q.pvda_r + Q.cda_r + Q.d66_r;
 Q.christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r;
 Q.large_christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r + Q.ds70_r;
 Q.progressivechristian_coalition = Q.pvda_r + Q.ppr_r + Q.d66_r + Q.kvp_r + Q.arp_r;
-//theoretically possible but would probably result in a split in the PvdA and VVD tbh
 Q.purple_coalition = Q.pvda_r + Q.d66_r + Q.vvd_r;
 //semi-impossible coalitions
 //seriously if somebody achieves those through PR that would be insane
@@ -123,47 +122,19 @@ data = [
         "legend": "CPN",
         "name": "CPN",
         "seats": Math.round(Q.cpn_r*1.5),
-    }
-];
-if (Q.ppr_exists && Q.ppr_r) {
-    data.push({
-            "id": "ppr",
-            "legend": "PPR",
-            "name": "PPR",
-            "seats": Math.round(Q.ppr_r*1.5),
-            });
-}
-data = data.concat([
+    },
     {
         "id": "psp",
         "legend": "PSP",
         "name": "PSP",
-        "seats": Math.round(Q.pvda_r*1.5),
+        "seats": Math.round(Q.psp_r*1.5),
     },
     {
         "id": "pvda",
         "legend": "PvdA",
         "name": "PvdA",
         "seats": Math.round(Q.pvda_r*1.5),
-    }
-]);
-if (Q.d66_exists && Q.d66_r) {
-    data.push({
-            "id": "d66",
-            "legend": "D'66",
-            "name": "D'66",
-            "seats": Math.round(Q.d66_r*1.5),
-            });
-}
-if (Q.ds70_exists && Q.ds70_r) {
-    data.push({
-            "id": "ds70",
-            "legend": "DS'70",
-            "name": "DS'70",
-            "seats": Math.round(Q.ds70_r*1.5),
-            });
-}
-data = data.concat([
+    },
     {
         "id": "kvp",
         "legend": "KVP",
@@ -200,14 +171,14 @@ data = data.concat([
         "name": "BP",
         "seats": Math.round(Q.bp_r*1.5),
     },
-    #apparently the VVD sat right of the BP
+    //apparently the VVD sat right of the BP
     {
         "id": "vvd",
         "legend": "VVD",
         "name": "VVD",
         "seats": Math.round(Q.vvd_r*1.5),
     },
-]);
+];
 
 if (window && d3) {
     var width = 500; 
