@@ -332,7 +332,7 @@ view-if: n_advisors < 3
 title: Rudolf Hilferding
 subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
+card-image: img/portraits/temporary.jpg
 tags: center_advisor
 view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: hilferding_advisor = 1; n_advisors += 1
@@ -344,7 +344,7 @@ Rudolf Hilferding is now an advisor.
 title: Otto Wels
 subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
 is-card: true
-card-image: img/portraits/WelsRudolf.jpg
+card-image: img/portraits/temporary.jpg
 tags: center_advisor
 view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: wels_advisor = 1; n_advisors += 1
@@ -356,7 +356,7 @@ Otto Wels is now an advisor.
 title: Hermann Müller
 subtitle: Hermann Müller is the last Social Democratic prime_minister. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
-card-image: img/portraits/MüllerHermann.jpg
+card-image: img/portraits/temporary.jpg
 tags: center_advisor
 view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: muller_advisor = 1; n_advisors += 1
@@ -368,7 +368,7 @@ Hermann Müller is now an advisor.
 title: Rudolf Breitscheid
 subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
-card-image: img/portraits/BreitscheidRudolf.jpg
+card-image: img/portraits/temporary.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
 on-arrival: breitscheid_advisor = 1; n_advisors += 1
 go-to: advisor_menu
@@ -523,7 +523,7 @@ Siegfried Aufhäuser is now an advisor.
 title: Rudolf Wissell
 subtitle: Rudolf Wissell is an economist who has been the labour Minister, and is an advocate for the interests of labour within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, labour Rights ?]
 is-card: true
-card-image: img/portraits/WissellRudolf.jpg
+card-image: img/portraits/temporary.jpg
 tags: labour_advisor
 view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: wissell_advisor = 1; n_advisors += 1; labour_strength += 3
