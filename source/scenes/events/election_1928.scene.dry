@@ -126,7 +126,17 @@ data = [
         "legend": "CPN",
         "name": "CPN",
         "seats": Math.round(Q.cpn_r*1.5),
-    },
+    }
+];
+if (Q.ppr_exists && Q.ppr_r) {
+    data.push({
+            "id": "ppr",
+            "legend": "PPR",
+            "name": "PPR",
+            "seats": Math.round(Q.ppr_r*1.5),
+            });
+}
+data = data.concat([
     {
         "id": "psp",
         "legend": "PSP",
@@ -138,7 +148,25 @@ data = [
         "legend": "PvdA",
         "name": "PvdA",
         "seats": Math.round(Q.pvda_r*1.5),
-    },
+    }
+]);
+if (Q.d66_exists && Q.d66_r) {
+    data.push({
+            "id": "d66",
+            "legend": "D'66",
+            "name": "D'66",
+            "seats": Math.round(Q.d66_r*1.5),
+            });
+}
+if (Q.ds70_exists && Q.ds70_r) {
+    data.push({
+            "id": "ds70",
+            "legend": "DS'70",
+            "name": "DS'70",
+            "seats": Math.round(Q.ds70_r*1.5),
+            });
+}
+data = data.concat([
     {
         "id": "kvp",
         "legend": "KVP",
