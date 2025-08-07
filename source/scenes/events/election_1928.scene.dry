@@ -84,7 +84,6 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
 Q.roomsrood_coalition = Q.pvda_r + Q.kvp_r + Q.arp_r;
 Q.christiansocialist_coalition = Q.pvda_r + Q.cda_r + Q.d66_r; 
 Q.christianliberal_coalition = Q.kvp_r + Q.cda_r + Q.arp_r + Q.vvd_r + Q.chu_r;
